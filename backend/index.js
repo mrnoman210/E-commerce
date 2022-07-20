@@ -7,7 +7,7 @@ http
   .createServer((req, res) => {
     //   console.log({ req, res });
     if (req.url === "/api/product" && req.method === "GET") {
-      res.writeHead(200, { "Content-Type": "application/json" });
+      res.writeHead(200, { "Access-Control-Allow-Origin": "*" });
 
       function createRandomDataSet(numberOfRows) {
         const rows = [];
@@ -18,13 +18,14 @@ http
             productName: faker.commerce.product(),
             email: faker.internet.email(),
             image: faker.image.food(null, null, true),
-            price: faker.commerce.price(100, 200, 0, "$"),
+            price: faker.commerce.price(1430, 2250, 0, "$"),
             commit: faker.git.commitMessage(),
-            number: faker.datatype.number({
-              min: 500,
-              max: 10000,
-              precision: 50,
+            likes: faker.datatype.number({
+              min: 0,
+              max: 5,
+              precision: 2.0,
             }),
+            description: faker.commerce.productDescription(),
           });
         }
         return JSON.stringify(rows);

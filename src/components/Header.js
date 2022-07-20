@@ -11,9 +11,9 @@ function Header() {
               xmlns="file:///C:/Users/Reaper%20Ashura/Downloads/scroll-svgrepo-com.svg"
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
+              strokeLinecap="round"
               stroke-linejoin="round"
-              stroke-width="2"
+              strokeWidth="2"
               className="w-10 h-10 text-white p-2 bg-red-400 rounded-full"
               viewBox="0 0 24 24"
             >
@@ -39,24 +39,25 @@ function Header() {
               Contact
             </a>
           </nav>
-          <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-red-400 rounded text-base mt-4 md:mt-0">
+          <button className="inline-flex items-center  hover:drop-shadow-lg bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-red-400 rounded text-base mt-4 md:mt-0">
             Sign in
             <svg
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
+              strokeLinecap="round"
               stroke-linejoin="round"
-              stroke-width="2"
+              strokeWidth="2"
               className="w-4 h-4 ml-1"
               viewBox="0 0 24 24"
             >
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </button>
-          <button className="inline-flex items-center left-1 bg-gray-100 border-0 py-1 px-3 focus:outline-none left-10 hover:bg-red-400 rounded text-base mt-4 md:mt-0">
+          <button className="inline-flex items-center  hover:drop-shadow-lg bg-gray-100 border-0 py-1 px-3 focus:outline-none left-10 hover:bg-red-400 rounded text-base mt-4 md:mt-0">
             Log in
           </button>
         </div>
+        <hr style={{ hight: "10.5rem", color: "blue" }} />
       </header>
     </>
   );
