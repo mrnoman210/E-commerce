@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Cards({ items }) {
   console.log(items);
@@ -13,6 +14,7 @@ function Cards({ items }) {
               alt="product image"
             />
           </a>
+
           <div className="px-5 pb-5">
             <a href="#">
               <h5 className="text-sm font-bold text-blue-700 font-semibold tracking-tight text-gray-900 dark:text-white">

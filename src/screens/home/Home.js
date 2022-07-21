@@ -10,7 +10,7 @@ function Home() {
   const [error, setError] = useState("");
   const url = "http://localhost:8000/api/product";
 
-  async function getAllProducts() {
+  async function getProducts() {
     try {
       const res = await fetch(url);
       setProduct(await res.json());
@@ -23,7 +23,7 @@ function Home() {
   }
   // console.log(post); //infinite loop
   useEffect(() => {
-    getAllProducts();
+    getProducts();
   }, []);
   return (
     <>
