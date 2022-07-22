@@ -3,6 +3,7 @@ import Cards from "../../components/cards/Cards";
 import { useState, useEffect } from "react";
 import "antd/dist/antd.css";
 import { Col, Row } from "antd";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [product, setProduct] = useState([]);

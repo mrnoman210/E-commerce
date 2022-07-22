@@ -2,11 +2,11 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 function Cards({ items }) {
-  console.log(items);
+  // console.log(items);
   return (
-    <>
-      <section className="hover:shadow-zinc-500 hover:border-y-emerald-900 hover:shadow-2xl">
-        <div className="max-w-xs max-h-fit bg-slate-500 rounded-lg text-black shadow-md dark:border-gray-700 m-3 ml-5 hover:bg-zinc-500">
+    <Link to={`${items.id}`}>
+      <section className=" hover:animate-pulse hover:shadow-zinc-500 hover:border-y-emerald-900 hover:shadow-2xl hover:text-black">
+        <div className="max-w-xs max-h-fit rounded-lg text-black shadow-md dark:border-gray-700 m-3 ml-5 hover:bg-orange-200">
           <a href="#">
             <img
               className="p-8 rounded-t-lg"
@@ -17,10 +17,10 @@ function Cards({ items }) {
 
           <div className="px-5 pb-5">
             <a href="#">
-              <h5 className="text-sm font-bold text-blue-700 font-semibold tracking-tight text-gray-900 dark:text-white">
+              <h5 className="text-sm font-bold font-semibold tracking-tigh dark:text-black">
                 Name: {items.name}
               </h5>
-              <h6 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+              <h6 className="text-xl font-semibold tracking-tight text-white dark:text-black">
                 Description : {items.description.substring(0, 20)}...
               </h6>
             </a>
@@ -81,20 +81,20 @@ function Cards({ items }) {
               </span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-3xl font-bold text-gray-900 dark:text-white">
+              <span className="text-3xl font-bold text-white dark:text-black">
                 {items.price}
               </span>
               <a
                 href="#"
                 className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
-                Add to cart
+                Buy
               </a>
             </div>
           </div>
         </div>
       </section>
-    </>
+    </Link>
   );
 }
 
