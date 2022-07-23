@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import "antd/dist/antd.css";
 import { Col, Row } from "antd";
 import { Link } from "react-router-dom";
+import Loader from "./Loader";
 
 function Home() {
   const [product, setProduct] = useState([]);
@@ -24,10 +25,15 @@ function Home() {
   }
   // console.log(post); //infinite loop
   useEffect(() => {
-    getProducts();
+    const timer = setTimeout(() => {
+      getProducts();
+    }, 1000);
+    return () => clearTimeout(timer);
   }, []);
   return (
     <>
+      {loader == true && <Loader />}
+
       <div class="container mx-auto">
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* <Row>

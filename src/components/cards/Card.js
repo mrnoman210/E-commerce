@@ -6,7 +6,16 @@ const Card = () => {
   const [product, setProduct] = useState([]);
   const [loader, setLoader] = useState(true);
   const [error, setError] = useState("");
+  const [isActive, setIsActive] = useState(false);
   const url = "http://localhost:8000/api/product";
+
+  const handleClick = () => {
+    // 👇️ toggle
+    setIsActive((current) => !current);
+
+    // 👇️ or set to true
+    // setIsActive(true);
+  };
 
   async function getProduct() {
     try {
@@ -155,9 +164,9 @@ const Card = () => {
             <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
               <div class="flex">
                 <span class="mr-3">Color</span>
-                <button class="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-                <button class="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-                <button class="border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none"></button>
+                <button class="border-2 border-gray-300 focus:bg-blue-700 rounded-full w-6 h-6 focus:outline-none"></button>
+                <button class="border-2 border-gray-300 focus:bg-blue-700 ml-1 rounded-full w-6 h-6 focus:outline-none"></button>
+                <button class="border-2 border-gray-300 focus:bg-blue-700 ml-1 rounded-full w-6 h-6 focus:outline-none"></button>
               </div>
               <div class="flex ml-6 items-center">
                 <span class="mr-3">Size</span>
@@ -191,7 +200,14 @@ const Card = () => {
               <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                 Button
               </button>
-              <button class="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+              <button
+                class="rounded-full w-10 h-10 p-0 inline-flex items-center justify-center ml-4 text-gray-500 "
+                style={{
+                  backgroundColor: isActive ? "red" : "",
+                  color: isActive ? "white" : "",
+                }}
+                onClick={handleClick}
+              >
                 <svg
                   fill="currentColor"
                   stroke-linecap="round"
@@ -207,7 +223,6 @@ const Card = () => {
           </div>
         </div>
       </div>
-      )
     </section>
   );
 };
