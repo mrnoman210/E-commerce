@@ -27,7 +27,7 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       getProducts();
-    }, 1000);
+    }, 10000);
     return () => clearTimeout(timer);
   }, []);
   return (
