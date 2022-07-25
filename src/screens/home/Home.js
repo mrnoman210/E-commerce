@@ -5,6 +5,7 @@ import "antd/dist/antd.css";
 import { Col, Row } from "antd";
 import { Link } from "react-router-dom";
 import Loader from "./Loader";
+import PopupLogin from "../../components/Login/Popup/PopupLogin";
 
 function Home() {
   const [product, setProduct] = useState([]);
@@ -17,32 +18,25 @@ function Home() {
       const res = await fetch(url);
       setProduct(await res.json());
       setLoader(false);
-      // console.log(posts);
-      // setProduct(posts);
     } catch (error) {
       console.log(error.message);
     }
   }
-  // console.log(post); //infinite loop
   useEffect(() => {
     const timer = setTimeout(() => {
       getProducts();
-    }, 10000);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
+
   return (
     <>
       {loader == true && <Loader />}
-
       <div class="container mx-auto">
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {/* <Row>
-        <Col span={6}> */}
           {product.map((items, index) => {
             return <Cards items={items} key={index} />;
           })}
-          {/* </Col>
-      </Row> */}
         </div>
       </div>
     </>

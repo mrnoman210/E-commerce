@@ -1,0 +1,89 @@
+.form__group {
+     position: relative;
+     padding: 15px 0 0;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     width: 30%;
+}
+
+.form__field {
+     font-family: inherit;
+     width: 100%;
+     border: 0;
+     border-bottom: 2px solid #9b9b9b;
+     outline: 0;
+     font-size: 1rem;
+     color: black;
+     padding: 7px 0;
+     background: transparent;
+     transition: border-color 0.5s;
+}
+
+.form__field::placeholder {
+     color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+     font-size: 0.75rem;
+     cursor: text;
+     top: 20px;
+}
+
+.form__label {
+     position: absolute;
+     top: 0;
+     display: block;
+     transition: 0.2s;
+     font-size: 1rem;
+     color: rgb(153, 130, 88);
+}
+
+.form__field:focus {
+     padding-bottom: 6px;
+     font-weight: 700;
+     border-width: 3px;
+     border-image: linear-gradient(to right, rgb(221, 207, 181), rgb(237, 201, 133));
+     border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+     position: absolute;
+     top: 0;
+     display: block;
+     transition: 0.2s;
+     font-size: 0.75rem;
+     color: rgb(234, 154, 6);
+     font-weight: 700;
+}
+
+.form__field:required,
+.form__field:invalid {
+     box-shadow: none;
+}
+
+.varificationInput {
+     display: block;
+     margin: 2em auto;
+     border: none;
+     padding: 0;
+     width: 10.5ch;
+     background: repeating-linear-gradient(90deg, rgb(249, 206, 126) 0, rgb(237, 173, 94) 1ch, transparent 0, transparent 1.5ch) 0 100%/10ch 2px no-repeat;
+     font: 5ch droid sans mono, consolas, monospace;
+     letter-spacing: 0.5ch;
+}
+
+.varificationInput:focus {
+     outline: none;
+     color: black;
+}
+
+.varificationInput[type=number] {
+     -moz-appearance: textfield;
+}
+
+.varificationInput::-webkit-outer-spin-button,
+.varificationInput::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+
+}

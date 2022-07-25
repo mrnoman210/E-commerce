@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -25,23 +25,29 @@ function Header() {
             <span className="ml-3 text-xl hover:text-red-400">E-commerce</span>
           </Link>
           <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center ">
-            <Link to={"/"} className="mr-5 hover:text-red-400">
+            <Link to={"/"} className="mr-5 text-black hover:text-red-400">
               Home
             </Link>
-            <Link to={"/shop"} className="mr-5 hover:text-red-400">
+            <Link to={"/shop"} className="mr-5 text-black hover:text-red-400">
               Shop
             </Link>
-            <Link to={"/blog"} className="mr-5 hover:text-red-400">
+            <Link to={"/blog"} className="mr-5 text-black hover:text-red-400">
               Blogs
             </Link>
-            <Link to={"/pages"} className="mr-5 hover:text-red-400">
+            <Link to={"/pages"} className="mr-5 text-black hover:text-red-400">
               Pages
             </Link>
-            <Link to={"/contact"} className="mr-5 hover:text-red-400">
+            <Link
+              to={"/contact"}
+              className="mr-5 text-black hover:text-red-400"
+            >
               Contact
             </Link>
           </nav>
-          <button className="inline-flex items-center  hover:drop-shadow-lg bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-red-400 rounded text-base mt-4 md:mt-0">
+          <a
+            href="../signup"
+            className="flex max-w-fit py-3 items-center hover:text-white hover:drop-shadow-lg bg-gray-100 border-0 mr-3 px-3 focus:outline-none text-black hover:bg-red-400 rounded text-base mt-4 md:mt-0"
+          >
             Sign in
             <svg
               fill="none"
@@ -54,10 +60,13 @@ function Header() {
             >
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
-          </button>
-          <button className="inline-flex items-center  hover:drop-shadow-lg bg-gray-100 border-0 py-1 px-3 focus:outline-none left-10 hover:bg-red-400 rounded text-base mt-4 md:mt-0">
+          </a>
+          <a
+            href="../login"
+            className="flex max-w-fit px-4 items-center hover:text-white hover:drop-shadow-lg bg-gray-100 border-0 py-3 focus:outline-none text-black hover:bg-red-400 rounded text-base mt-4 md:mt-0"
+          >
             Log in
-          </button>
+          </a>
         </div>
         <hr style={{ hight: "10.5rem", color: "blue" }} />
       </header>

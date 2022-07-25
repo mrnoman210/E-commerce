@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-// import { useEffect } from "react";
 const Card = () => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
@@ -10,11 +9,7 @@ const Card = () => {
   const url = "http://localhost:8000/api/product";
 
   const handleClick = () => {
-    // 👇️ toggle
     setIsActive((current) => !current);
-
-    // 👇️ or set to true
-    // setIsActive(true);
   };
 
   async function getProduct() {
@@ -22,8 +17,6 @@ const Card = () => {
       const res = await fetch(url);
       setProduct(await res.json());
       setLoader(false);
-      // console.log(posts);
-      // setProduct(posts);
     } catch (error) {
       console.log(error.message);
     }
@@ -32,13 +25,6 @@ const Card = () => {
   React.useEffect(() => {
     getProduct();
   }, []);
-  // const piece = product.reduce(
-  //   (obj, item) => Object.assign(obj, { [item.key]: item.value }),
-  //   {}
-  // );
-
-  // console.log(product);
-  // console.log(piece);
   return (
     <section class="text-gray-600 body-font overflow-hidden">
       <div class="container px-5 py-24 mx-auto">
@@ -46,7 +32,6 @@ const Card = () => {
           <img
             alt="ecommerce"
             class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-            // src={product[0].image}
           />
           <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
             <h2 class="text-sm title-font text-gray-500 tracking-widest">
