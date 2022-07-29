@@ -8,9 +8,9 @@ function Header() {
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <Link
             to={"/"}
-            className="flex title-font font-medium items-center text-black mb-4 md:mb-0 cursor-pointer  "
+            className="flex title-font font-medium items-center dark:text-black mb-4 md:mb-0 cursor-pointer  "
           >
-            <svg
+            {/* <svg
               xmlns="file:///C:/Users/Reaper%20Ashura/Downloads/scroll-svgrepo-com.svg"
               fill="none"
               stroke="currentColor"
@@ -21,8 +21,10 @@ function Header() {
               viewBox="0 0 24 24"
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span className="ml-3 text-xl hover:text-red-400">E-commerce</span>
+            </svg> */}
+            <span className="ml-3 text-xl hover:text-red-400 text-black">
+              E-commerce
+            </span>
           </Link>
           <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center ">
             <Link to={"/"} className="mr-5 text-black hover:text-red-400">

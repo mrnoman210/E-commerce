@@ -13,12 +13,14 @@ import Login from "./components/Login/Login";
 import Signup from "./components/SignUp/Signup";
 import Varification from "./components/Login/Varification";
 import ForgotPassword from "./components/Login/ForgotPassword";
+import PopupLogin from "./components/Login/Popup/PopupLogin";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />

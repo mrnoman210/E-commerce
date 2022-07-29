@@ -2,7 +2,7 @@ import React from "react";
 import "./Login.css";
 const Login = () => {
   return (
-    <foam>
+    <form action="/">
       <div className="justify-center flex flex-col m-10">
         <h1 className="font-bold font-serif text-3xl text-orange-400 self-center">
           Welcome to E-commerce! Plaese Login.
@@ -28,7 +28,7 @@ const Login = () => {
               placeholder="Enter Your Password"
               name="name"
               id="name"
-              required
+              required=""
             />
             <label for="name" class="form__label">
               Enter Your Password:
@@ -36,14 +36,14 @@ const Login = () => {
           </div>
           <a
             href="/forgot-password"
-            className="hover:underline flex-wrap-reverse"
+            className="hover:underline flex-wrap-reverse hover:text-blue-400"
           >
             forgot password?
           </a>
           <button type="submit" className="m-8">
             <a
               href="/"
-              className="bg-transparent py-5 hover:bg-red-400 text-black-700 font-semibold text-black hover:text-white px-40 border border-black hover:border-transparent rounded"
+              className="bg-transparent py-5 md:py-3 lg:px-40 sm:py-7 md:px-40 hover:bg-red-400 text-black-700 font-semibold text-black hover:text-white border border-black hover:border-transparent rounded"
             >
               Log in
             </a>
@@ -59,7 +59,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </foam>
+    </form>
   );
 };
 
