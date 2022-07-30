@@ -1,10 +1,34 @@
 import React from "react";
+import { FaCentos } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-function Header() {
+function Header({ color }) {
+  const [bgColor, setBgColor] = React.useState(false);
+  const listenScrollEvent = (event) => {
+    if (window.scrollY < 500) {
+      return setBgColor(true);
+    } else {
+      return setBgColor(false);
+    }
+  };
+  React.useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+
+    return () => window.removeEventListener("scroll", listenScrollEvent);
+  }, []);
+
   return (
     <>
-      <header className="text-gray-600 body-font bg-orange-100">
+      <header
+        className="text-gray-600 body-font bg-red-100 sticky top-0"
+        style={{
+          background: bgColor
+            ? "rgb(255 237 213 / var(--tw-bg-opacity))"
+            : "#f1bd74",
+          opacity: bgColor ? "100%" : "90%",
+          minHeight: bgColor ? "100%" : "0vh",
+        }}
+      >
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <Link
             to={"/"}

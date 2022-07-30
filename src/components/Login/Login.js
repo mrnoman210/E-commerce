@@ -3,7 +3,7 @@ import "./Login.css";
 const Login = () => {
   return (
     <form action="/">
-      <div className="justify-center flex flex-col m-10">
+      <div className=" flex flex-col m-10 p-11">
         <h1 className="font-bold font-serif text-3xl text-orange-400 self-center">
           Welcome to E-commerce! Plaese Login.
         </h1>

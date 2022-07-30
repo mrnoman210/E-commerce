@@ -1,6 +1,6 @@
 import React from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
-import { Button } from "./Style";
+import "./PlaceOnTop.css";
 
 const PlaceOnTop = () => {
   const [visible, setVisible] = React.useState(false);
@@ -24,12 +24,13 @@ const PlaceOnTop = () => {
   window.addEventListener("scroll", toggleVisible);
 
   return (
-    <Button>
+    <div className="sticky border-r-4 cursor-pointer text-4xl bottom-7 w-11 h-13 inline">
       <FaArrowCircleUp
         onClick={scrollToTop}
         style={{ display: visible ? "inline" : "none" }}
+        className=" text-center glow text-green-400 "
       />
-    </Button>
+    </div>
   );
 };
 

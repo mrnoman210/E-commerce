@@ -13,8 +13,8 @@ import Login from "./components/Login/Login";
 import Signup from "./components/SignUp/Signup";
 import Varification from "./components/Login/Varification";
 import ForgotPassword from "./components/Login/ForgotPassword";
-import PopupLogin from "./components/Login/Popup/PopupLogin";
-
+import "./components/Login/Login.css";
+import PlaceOnTop from "./components/PlaceTopButton/PlaceOnTop";
 function App() {
   return (
     <div className="App">
@@ -34,6 +34,7 @@ function App() {
           <Route path="/:id" element={<Card />} />
         </Routes>
         <Footer />
+        <PlaceOnTop />
       </BrowserRouter>
     </div>
   );

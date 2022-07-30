@@ -9,7 +9,7 @@ const PopupLogin = () => {
     timer = setTimeout(() => {
       setPopup(true);
       return () => clearTimeout(timer);
-    }, 100);
+    }, 10000);
   }
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const PopupLogin = () => {
     <>
       <div
         className="overflow-hidden fixed md:w-auto sm:w-auto overflow-y-auto overflow-x-hidden w-full md:inset-0 h-modal md:h-full py-12 backdrop-blur-sm transition duration-150 ease-in-out z-10 top-0 right-0 bottom-0 left-0 h-36"
-        id="static-modal"
+        // id="static-modal"
         style={{
           display: popup ? "block" : "none",
         }}
@@ -43,7 +43,7 @@ const PopupLogin = () => {
               X
             </h1>
             <h1 className="font-bold font-serif text-3xl text-orange-400 self-center sm:h-auto">
-              Login
+              Login?
             </h1>
 
             {/* <label for="email">
@@ -69,7 +69,7 @@ const PopupLogin = () => {
               <a
                 href="/login"
                 type="submit"
-                class="glow testing justify-center flex bg-transparent py-5 md:py-3 lg:px-40 sm:py-7 md:px-40 hover:bg-red-400 text-black-700 font-semibold text-black hover:text-white border border-black hover:border-transparent rounded"
+                class="testing justify-center flex bg-transparent py-5 md:py-3 lg:px-40 sm:py-7 md:px-40 hover:bg-red-400 text-black-700 font-semibold text-black hover:text-white border border-black hover:border-transparent rounded"
               >
                 Login
               </a>

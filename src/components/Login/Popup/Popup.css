@@ -20,25 +20,6 @@
      background: #f1f1f1;
 }
 
-
-
-
-/* 
-
-.btn {
-     background-color: #04AA6D;
-     color: white;
-     padding: 16px 20px;
-     border: none;
-     cursor: pointer;
-     width: 100%;
-     margin-bottom: 10px;
-     opacity: 0.8;
-} */
-
-
-
-
 .testing {
      background-color: white(252, 220, 160);
      position: relative;
@@ -87,8 +68,8 @@
 }
 
 .testing:hover:after {
-     -webkit-animation: glitch-test 2s infinite linear alternate;
-     animation: glitch-test 2s infinite linear alternate;
+     -webkit-animation: glitch-test 5s infinite linear alternate;
+     animation: glitch-test 5s infinite linear alternate;
 }
 
 @-webkit-keyframes glitch-test {
@@ -161,7 +142,7 @@
      }
 
      100% {
-          clip: rect(0px, 450px, 0px, 0px);
+          clip: rect(0px, 100px, 0px, 0px);
      }
 }
 
