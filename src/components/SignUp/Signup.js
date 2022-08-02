@@ -6,7 +6,7 @@ const Signup = () => {
     e.prevanteDefault();
   };
   return (
-    <form onSubmit={handleLogin}>
+    <form action="../backend/index.js" method="post" onSubmit={handleLogin}>
       <div class="shadow-lg shadow-blue bg-grey-lighter sm:w-96 md:w96 lg:w-full container max-w-lg mx-auto items-center justify-center m-6 p-4">
         <div class="border-solid border-black px-6 py-8 rounded  text-black lg:w-full ">
           <h1 class="font-bold font-serif text-3xl text-orange-400 self-center justify-center flex">
@@ -31,7 +31,7 @@ const Signup = () => {
               type="text"
               class="form__field"
               placeholder="Enter Your Password"
-              name="name"
+              name="email"
               id="name"
               required=""
             />
@@ -45,7 +45,7 @@ const Signup = () => {
               type="password"
               class="form__field"
               placeholder="Enter Your Password"
-              name="name"
+              name="password"
               id="name"
               required=""
             />
@@ -58,7 +58,7 @@ const Signup = () => {
               type="password"
               class="form__field"
               placeholder="Enter Your Password"
-              name="name"
+              name="confrim_Password"
               id="name"
               required=""
             />
@@ -71,7 +71,7 @@ const Signup = () => {
             className="my-10 flex justify-center lg:w-full ml-6 md:m-0 sm:m-0 sm:wx-8"
           >
             <a
-              href="/"
+              href="/lll"
               className="bg-transparent w-auto lg:py-5 sm:py-6 md:py-0 lg:px-40 sm:px-4 md:px-3 hover:bg-red-400 text-black-700 font-semibold text-black hover:text-white border border-black hover:border-transparent rounded"
             >
               Sign Up

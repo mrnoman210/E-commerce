@@ -39,5 +39,32 @@ http
   .listen(PORT, undefined, undefined, () =>
     console.log(`Server is running at http://localhost:${PORT}`)
   );
+
+// import mysql from "mysql";
+
+// const connection = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "",
+//   database: "signupecom",
+// });
+
+// connection.connect();
+// // const name = "noman";
+// // let name = e.targe.name;
+// const name = document.getElementsByName(name).values;
+// connection.query(
+//   `insert into databasee values ("${name}", "${name}","${name}","${name}")`,
+//   function (err, results, fields) {
+//     if (err) {
+//       throw err;
+//     }
+
+//     console.log(results);
+//     console.log(fields);
+//   }
+// );
+
+// connection.end();
 // console.log(`server is running on localhost:${PORT}`);
 // module.exports = { createRandomDataSet };
