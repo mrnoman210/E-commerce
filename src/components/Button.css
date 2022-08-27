@@ -1,0 +1,12 @@
+.myClas {
+     transition: transform 200ms;
+     box-shadow: 50ms;
+     box-shadow: black 4px 4px 0;
+     border-radius: 5px;
+}
+
+.myClas:active {
+     transform: translateY(2px) translateX(2px);
+     box-shadow: none;
+
+}

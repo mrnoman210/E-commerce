@@ -1,12 +1,35 @@
 import React from "react";
 // import "../Login ";
-
+import { useState } from "react";
 const Signup = () => {
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+    username: "",
+  });
+  const { email, password } = loginData;
   const handleLogin = (e) => {
     e.prevanteDefault();
   };
+  const handleChange = (e) => {
+    setLoginData({ ...loginData, [e.target.name]: e.target.value });
+    console.log(loginData);
+  };
+  const url = "http://localhost:5000/user";
+  const jsonLoginData = JSON.stringify(loginData);
+  fetch(url, { method: "POST", body: loginData })
+    .then(() => {
+      console.log("sucess");
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   return (
-    <form action="../backend/index.js" method="post" onSubmit={handleLogin}>
+    <form
+      action="http://localhost:5000/user"
+      method="post"
+      onSubmit={jsonLoginData}
+    >
       <div class="shadow-lg shadow-blue bg-grey-lighter sm:w-96 md:w96 lg:w-full container max-w-lg mx-auto items-center justify-center m-6 p-4">
         <div class="border-solid border-black px-6 py-8 rounded  text-black lg:w-full ">
           <h1 class="font-bold font-serif text-3xl text-orange-400 self-center justify-center flex">
@@ -17,9 +40,10 @@ const Signup = () => {
               type="text"
               class="form__field ="
               placeholder="Enter Your Password"
-              name="name"
+              name="username"
               id="name"
-              required=""
+              required
+              onChange={(e) => handleChange(e)}
             />
             <label for="name" class="form__label">
               Full Name:
@@ -32,8 +56,9 @@ const Signup = () => {
               class="form__field"
               placeholder="Enter Your Password"
               name="email"
-              id="name"
-              required=""
+              id="email"
+              required
+              onChange={(e) => handleChange(e)}
             />
             <label for="name" class="form__label">
               Email or Phone Number:
@@ -46,8 +71,9 @@ const Signup = () => {
               class="form__field"
               placeholder="Enter Your Password"
               name="password"
-              id="name"
-              required=""
+              id="password"
+              required
+              onChange={(e) => handleChange(e)}
             />
             <label for="name" class="form__label">
               Password:
@@ -59,8 +85,8 @@ const Signup = () => {
               class="form__field"
               placeholder="Enter Your Password"
               name="confrim_Password"
-              id="name"
-              required=""
+              id="confrim_Password"
+              required
             />
             <label for="name" class="form__label">
               Confirm Password:
@@ -70,12 +96,12 @@ const Signup = () => {
             type="submit"
             className="my-10 flex justify-center lg:w-full ml-6 md:m-0 sm:m-0 sm:wx-8"
           >
-            <a
+            {/* <a
               href="/lll"
               className="bg-transparent w-auto lg:py-5 sm:py-6 md:py-0 lg:px-40 sm:px-4 md:px-3 hover:bg-red-400 text-black-700 font-semibold text-black hover:text-white border border-black hover:border-transparent rounded"
-            >
-              Sign Up
-            </a>
+            > */}
+            Sign Up
+            {/* </a> */}
           </button>
 
           <div class="text-center text-sm text-grey-dark mt-4">
@@ -85,7 +111,7 @@ const Signup = () => {
               href="#"
             >
               Terms of Service
-            </a>{" "}
+            </a>
             &nbsp;&nbsp;and&nbsp;&nbsp;
             <a
               class="no-underline border-b border-grey-dark text-grey-dark decoration-blue-700 hover:decoration-4 hover:underline"

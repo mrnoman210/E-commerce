@@ -1,11 +1,11 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Cards({ items }) {
   // console.log(items);
   return (
-    <Link to={`${items.id}`}>
-      <section className="hover:shadow-zinc-500 hover:border-y-orange-200 hover:shadow-2xl hover:text-black hover:bg-orange-200">
+    <Link to={`${items.id}`} className="">
+      <section className="inline-block overflow-hidden hover:shadow-zinc-500 hover:border-y-orange-200 hover:shadow-2xl hover:text-black hover:bg-orange-200">
         <div className="max-w-xs max-h-fit rounded-lg text-black shadow-md  m-3 ml-5 ">
           <img
             className="p-8 rounded-t-lg"

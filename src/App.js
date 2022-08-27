@@ -17,25 +17,25 @@ import "./components/Login/Login.css";
 import PlaceOnTop from "./components/PlaceTopButton/PlaceOnTop";
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Header />
+     <div className="App">
+    <BrowserRouter>
+      <Header />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/pages" element={<Pages />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/varification" element={<Varification />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/:id" element={<Card />} />
-        </Routes>
-        <Footer />
-        <PlaceOnTop />
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/pages" element={<Pages />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/varification" element={<Varification />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/:id" element={<Card />} />
+      </Routes>
+      <Footer />
+      <PlaceOnTop />
+    </BrowserRouter>
     </div>
   );
 }

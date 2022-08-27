@@ -1,0 +1,96 @@
+/* * {
+     box-sizing: border-box;
+} */
+
+
+@property --a {
+     initial-value: 0deg;
+     inherits: false;
+     syntax: '<angle>';
+}
+
+@property --h {
+     initial-value: 0;
+     inherits: false;
+     syntax: '<number>';
+}
+
+.loader {
+     margin: 20%;
+     padding: 2rem 4rem;
+     font-family: monospace;
+     font-weight: bold;
+     color: black;
+     align-content: center;
+     justify-content: center;
+     border-style: solid;
+     border-width: 1vmin;
+     font-size: 2rem;
+     --charge: hsl(var(--h, 0), 80%, 50%);
+     -o-border-image: conic-gradient(var(--charge) var(--a), transparent calc(var(--a) + 0.5deg)) 30;
+     border-image: conic-gradient(var(--charge) var(--a), transparent calc(var(--a) + 0.5deg)) 30;
+     -webkit-animation: load 2s infinite ease-in-out;
+     animation: load 2s infinite ease-in-out;
+}
+
+@-webkit-keyframes load {
+
+     0%,
+     10% {
+          --a: 0deg;
+          --h: 0;
+     }
+
+     100% {
+          --a: 360deg;
+          --h: 100;
+     }
+}
+
+@keyframes load {
+
+     0%,
+     10% {
+          --a: 0deg;
+          --h: 0;
+     }
+
+     100% {
+          --a: 360deg;
+          --h: 100;
+     }
+}
+
+.textLoading {
+     align-items: center;
+     margin-left: 4rem;
+}
+
+@keyframes load2 {
+     0% {
+          opacity: 0.08;
+          font-size: 10px;
+          font-weight: 400;
+          filter: blur(5px);
+          letter-spacing: 3px;
+     }
+
+     100% {
+          opacity: 1;
+          font-size: 12px;
+          font-weight: 600;
+          filter: blur(0);
+     }
+}
+
+.animate {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+     margin: auto;
+     font-family: Helvetica, sans-serif, Arial;
+     animation: load2 1.2s infinite 0s ease-in-out;
+     animation-direction: alternate;
+     text-shadow: 0 0 1px white;
+}
